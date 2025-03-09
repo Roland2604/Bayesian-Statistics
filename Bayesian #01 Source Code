@@ -1,6 +1,7 @@
 import numpy as np
 import scipy.stats as sts
 import matplotlib.pyplot as plt
+import scipy as sp
 
 mu = np.linspace(1.65, 1.8, num=50)
 test = np.linspace(0, 2)  # Currently unused
@@ -30,8 +31,6 @@ plt. title("Likelihood of $|mus given observation 1.7m")
 plt.ylabel ("Probability Density/Likelihood")
 plt. xlabel("Value of $|mu$")
 plt.show()
-
-import scipy as sp
 
 unnormalized_posterior = likelihood_out * uniform_dist
 plt.plot(mu, unnormalized_posterior)
